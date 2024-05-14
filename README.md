@@ -1,2 +1,17 @@
 # DataScience_FinalProject
 Integrantes: Eduardo Escobar, Anthony Paredes y Keiber Silva
+
+1) Objetivo: Visualizar las frecuencias de los reportes presentados por el ECU911 tanto en términos absolutos como en términos percápita. Además, encontrar la correlación existente entre los reportes presentados por el ECU911 y los delitos registrados por el Ministerio del interior, tanto por servicio como por provincia.
+2) Metodología: Primero se realizó la limpieza de la base de datos del ECU911. Aquí se corrigió las columnas de la base de datos del mes de enero para que coincidan con los mismos nombres de febrero y marzo. También se identificó y eliminó las filas que contengan los elementos "ZONA NO DELIMITADA" para facilitar el análisis. Igualmente se eliminaron los missing values para no tener complicaciones más adelante. Con respecto a la base de datos del Ministerio del Interior, se verificó que contengan los mismos elementos que la base de datos del ECU911 para las columnas de provincia, cantón y parroquia. También se identificó los elementos de la columna de subinfracciones para luego clasificarlos manualmente por tipo de servicio relacionado a la base de datos del ECU911. Esto facilitará realizar la correlación. Con las bases limpias se procedió a elaborar archivos .csv para poder usarlos más adelante para elaborar diagramas de barras, treemaps y las correlaciones. Finalmente se realiza lo antes mencionado y se hace el análisis.
+3) Hallazgos principales: En términos absolutos la provincia de Guayas es la de mayor frecuencia. Esto contrasta mucho con los resultados observados en términos percápita, pues aquí se evidencia que por persona, la provincia que más reportes realiza es Galápagos. La tendencia se mantiene en los cantones, pues San Cristobal e Isabela, pertenecientes a Galápagos, encabezan la lista de frecuencias percápita para los cantones. Cuando se observa los reportes en términos percápita de las parroquias se puede identificar que empiezan a aparecer sectores pertenecientes a las provincias con mayor número de reportes en términos absolutos. Este es el caso de Tambillo, perteneciente a la provincia de Pichincha. De acuerdo a las correlaciones, la existente entre los reportes registrados por el ECU911 y los delitos registrados en el Ministerio del Interior, se observa que esta alcanza el valor de 0.99. Esto significa que las personas si están reportando delitos reales, los cuales son registrados por el Ministerio del Interior. La correlación entre los reportes por provincia y los delitos registrados por provincia es de 0.97, lo cual refuerza la conclusión anterior.
+4) Instrucciones para instalar y ejecutar el código: Es importante descargar todos los archivos proporcionados en la carpeta "Base de datos". Luego de esto se debe instalar las librerías openpyxl y plotly. Además hay que importar la librería de pandas y de plotly.express. El orden en el cual se deben ejecutar los códigos es:
+   a) LimpiezaBaseDeDatos_ECU911
+   b) LimpiezaBaseDeDatos_MinisterioDelInterior
+   c)Archivos_Gráficos
+   d)Gráficos
+   e)Correlaciones
+Todo esto les permitirá ejecutar los códigos sin ningún problema.
+Adicional en la carpeta "Descripciones de las bases de datos" se adjuntan las descripciones de las mismas para mayor comprensión.
+En los siguientes links pueden acceder a la ubicación original de la información:
+ECU911 - https://www.datosabiertos.gob.ec/dataset/base-de-emergencias
+Ministerio del Interior - https://www.datosabiertos.gob.ec/dataset/personas-detenidas-aprehendidas
